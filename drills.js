@@ -160,5 +160,7 @@
   
   // Sorting books
   // Imagine that I gave you twenty books to sort in alphabetical order. How would you go about it? Can you express this as an algorithm?
-  
+  let books = ['Echo', 'Charlie', 'India', 'Hotel', 'Sierra', 'Tango', 'Golf', 'Alpha', 'Oscar', 'Delta', 'Lima', 'Papa', 'November', 'Romeo', 'Foxtrot', 'Mike', 'Kilo', 'Quebec', 'Bravo', 'Juliett'];
+  console.log(books);
+  console.log(mSort(books));
 })();
