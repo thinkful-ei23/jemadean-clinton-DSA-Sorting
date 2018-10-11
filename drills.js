@@ -5,7 +5,7 @@
 
 // MergeSort
 // Write a function mSort that sorts the dataset above using the mergesort algorithm.
-  // Add functionality to both the qSort and mSort programs so that the programs shows how many operations it took to sort the same dataset
+// Add functionality to both the qSort and mSort programs so that the programs shows how many operations it took to sort the same dataset
 
 // Bucket sort
 // Write an O(n) algorithm to sort an array of integers, where you know in advance what the lowest and highest values are.
