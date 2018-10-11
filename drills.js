@@ -34,11 +34,45 @@ function qsPart(arr, start, end) {
   return j;
 }
 
-console.log(`qSort([${data1}]) =`, qSort(data1));
-console.log(`qSort([${data2}]) =`, qSort(data2));
+// console.log(`qSort([${data1}]) =`, qSort(data1));
+// console.log(`qSort([${data2}]) =`, qSort(data2));
 
 // MergeSort
 // Write a function mSort that sorts the dataset above using the mergesort algorithm.
+function mSort(arr) {
+  if (arr.length <= 1) {
+    return arr;
+  }
+  const mid = Math.floor(arr.length / 2);
+  let left = arr.slice(0, mid);
+  let right = arr.slice(mid);
+  left = mSort(left);
+  right = mSort(right);
+  return merge(left, right, arr);
+}
+
+function merge(left, right, arr) {
+  let leftInd = 0;
+  let rightInd = 0;
+  let outputInd = 0;
+  while (leftInd < left.length && rightInd < right.length) {
+    if (left[leftInd] < right[rightInd]) {
+      arr[outputInd++] = left[leftInd++];
+    } else {
+      arr[outputInd++] = right[rightInd++];
+    }
+  }
+  for (let i=leftInd; i<left.length; i++) {
+    arr[outputInd++] = left[i];
+  }
+  for (let i=rightInd; i<right.length; i++) {
+    arr[outputInd++] = right[i];
+  }
+  return arr;
+}
+
+console.log(`mSort([${data1}]) =`, mSort(data1));
+console.log(`mSort([${data2}]) =`, mSort(data2));
 
 // Add functionality to both the qSort and mSort programs so that the programs shows how many operations it took to sort the same dataset
 
